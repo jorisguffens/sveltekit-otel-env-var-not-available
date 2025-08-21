@@ -19,7 +19,7 @@ Output:
 <<<EOF
 ```
 
-3. `node ./build`
+3. `node --env-file=.env ./build`
 ```
 dev false
 process.env InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://applicationinsights.azure.com/;LiveEndpoint=https://livediagnostics.monitor.azure.com/;ApplicationId= 00000000-0000-0000-0000-000000000000
@@ -35,7 +35,7 @@ The log statements in `instrumentation.server.js` are not shown.
 <<<EOF
 ```
 
-## 2. Build fails without error message
+## 3. Build fails without an error message
 
 When an `instrumentation.server.js` file is present but instrumentation is not enabled in `svelte.config.js`, the build fails without any error message.
 
